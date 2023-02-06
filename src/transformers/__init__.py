@@ -261,6 +261,7 @@ _import_structure = {
         "ErnieConfig",
     ],
     "models.esm": ["ESM_PRETRAINED_CONFIG_ARCHIVE_MAP", "EsmConfig", "EsmTokenizer"],
+    "models.fastspeech2": ["FASTSPEECH2_PRETRAINED_CONFIG_ARCHIVE_MAP", "FastSpeech2Config", "FastSpeech2Tokenizer"],
     "models.flaubert": ["FLAUBERT_PRETRAINED_CONFIG_ARCHIVE_MAP", "FlaubertConfig", "FlaubertTokenizer"],
     "models.flava": [
         "FLAVA_PRETRAINED_CONFIG_ARCHIVE_MAP",
@@ -1465,6 +1466,13 @@ else:
             "EsmForTokenClassification",
             "EsmModel",
             "EsmPreTrainedModel",
+        ]
+    )
+    _import_structure["models.fastspeech2"].extend(
+        [
+            "FASTSPEECH2_PRETRAINED_MODEL_ARCHIVE_LIST",
+            "FastSpeech2Model",
+            "FastSpeech2PreTrainedModel",
         ]
     )
     _import_structure["models.flaubert"].extend(
@@ -3732,6 +3740,7 @@ if TYPE_CHECKING:
     from .models.encoder_decoder import EncoderDecoderConfig
     from .models.ernie import ERNIE_PRETRAINED_CONFIG_ARCHIVE_MAP, ErnieConfig
     from .models.esm import ESM_PRETRAINED_CONFIG_ARCHIVE_MAP, EsmConfig, EsmTokenizer
+    from .models.fastspeech2 import FASTSPEECH2_PRETRAINED_CONFIG_ARCHIVE_MAP, FastSpeech2Config, FastSpeech2Tokenizer
     from .models.flaubert import FLAUBERT_PRETRAINED_CONFIG_ARCHIVE_MAP, FlaubertConfig, FlaubertTokenizer
     from .models.flava import (
         FLAVA_PRETRAINED_CONFIG_ARCHIVE_MAP,
@@ -4759,6 +4768,11 @@ if TYPE_CHECKING:
             EsmForTokenClassification,
             EsmModel,
             EsmPreTrainedModel,
+        )
+        from .models.fastspeech2 import (
+            FASTSPEECH2_PRETRAINED_MODEL_ARCHIVE_LIST,
+            FastSpeech2Model,
+            FastSpeech2PreTrainedModel,
         )
         from .models.flaubert import (
             FLAUBERT_PRETRAINED_MODEL_ARCHIVE_LIST,

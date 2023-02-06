@@ -72,6 +72,7 @@ from . import (
     encoder_decoder,
     ernie,
     esm,
+    fastspeech2,
     flaubert,
     flava,
     fnet,
